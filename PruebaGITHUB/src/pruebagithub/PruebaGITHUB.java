@@ -20,10 +20,12 @@ public class PruebaGITHUB {
      */
     public static void main(String[] args) throws IOException {
         BufferedReader tec = new BufferedReader(new InputStreamReader(System.in));
-        int n;
+        int n1,n2;
         System.out.println("Introduce un numero");
-        n=Integer.parseInt(tec.readLine());
-        System.out.println("El numero introducido es "+n);
+        n1=Integer.parseInt(tec.readLine());
+        System.out.println("Introduce otro numero");
+        n2=Integer.parseInt(tec.readLine());
+        System.out.println("Los numeros introducidos son "+n1+" y "+n2);
     }
     
 }
