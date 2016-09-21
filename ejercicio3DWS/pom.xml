@@ -3,11 +3,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.fpmislata</groupId>
-    <artifactId>ejercicio3</artifactId>
+    <artifactId>ejercicio3DWS</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
-    <name>ejercicio3</name>
+    <name>ejercicio3DWS</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
