@@ -10,9 +10,9 @@ public class Pelicula {
     
     private String nombre;
     private int diasAlguiler;
-    private int edadMaxCliente;
+    private String edadMaxCliente;
     private String formaPago;
-    private String Especificaciones;
+    private String especificaciones;
 
     /**
      * @return the nombre
@@ -45,14 +45,14 @@ public class Pelicula {
     /**
      * @return the edadMaxCliente
      */
-    public int getEdadMaxCliente() {
+    public String getEdadMaxCliente() {
         return edadMaxCliente;
     }
 
     /**
      * @param edadMaxCliente the edadMaxCliente to set
      */
-    public void setEdadMaxCliente(int edadMaxCliente) {
+    public void setEdadMaxCliente(String edadMaxCliente) {
         this.edadMaxCliente = edadMaxCliente;
     }
 
@@ -74,14 +74,14 @@ public class Pelicula {
      * @return the Especificaciones
      */
     public String getEspecificaciones() {
-        return Especificaciones;
+        return especificaciones;
     }
 
     /**
      * @param Especificaciones the Especificaciones to set
      */
-    public void setEspecificaciones(String Especificaciones) {
-        this.Especificaciones = Especificaciones;
+    public void setEspecificaciones(String especificaciones) {
+        this.especificaciones = especificaciones;
     }
     
 }
