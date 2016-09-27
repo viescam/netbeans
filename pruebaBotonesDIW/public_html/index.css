@@ -1,0 +1,25 @@
+div{    
+    color:white;
+    text-align: center;   
+}
+.primero{
+    background-color: #3B14AF;
+}
+.segundo{
+    background-color: #674E39;
+}
+a{
+    border: 1px solid white;
+    border-radius:10px;
+    text-decoration: none;
+}
+.primero a{
+    background-color: #FFEE40;
+    color:black;
+    
+}
+.segundo a{
+    background-color: #223E3E;
+    color:white;
+}
+
