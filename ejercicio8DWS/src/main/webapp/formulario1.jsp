@@ -15,7 +15,7 @@
     <body>
         <% if(request.getParameter("Nom_Pelicula")==null){ %>
         Complete este formulario:<br>
-        <form name="videoclub" action="mailto: videoclub@gmail.com" method="POST">
+        <form name="videoclub" action="formulario1.jsp" method="POST">
             <table  border="0" width="50%" cellspacing="2" bgcolor="#F5F6CE">
                 <thead>
                     <tr>
@@ -96,20 +96,19 @@
             
         </form>
         <% } else { %>
-        <% String nombrePelicula, formaPago, especificaciones, edadMaxCliente;
-            int diasAlquiler; %>
+        <% String nombrePelicula, formaPago, especificaciones, edadMaxCliente,diasAlquiler; %>
         <% 
             nombrePelicula= request.getParameter("Nom_Pelicula");
             formaPago= request.getParameter("Forma_Pago");
             especificaciones= request.getParameter("especificaciones");
-            diasAlquiler= Integer.parseInt(request.getParameter("Num_Dias_Alquiler"));
+            diasAlquiler= request.getParameter("Num_Dias_Alquiler");
             edadMaxCliente = request.getParameter("Edad_Cliente");
         %>
             <jsp:setProperty name="pelicula" property="nombre" value="<%= nombrePelicula %>" />
             <jsp:setProperty name="pelicula" property="formaPago" value="<%= formaPago %>" />
-            <jsp:setProperty name="pelicula" property="edadMaxCliente" value="<%= diasAlquiler %>" />
+            <jsp:setProperty name="pelicula" property="edadMaxCliente" value="<%= edadMaxCliente %>" />
             <jsp:setProperty name="pelicula" property="especificaciones" value="<%= especificaciones %>" />
-            <jsp:setProperty name="pelicula" property="diasAlguiler" value="<%= diasAlquiler %>" />
+            <jsp:setProperty name="pelicula" property="diasDeAlquiler" value="<%= diasAlquiler %>" />
             <jsp:forward page="/formulario2.jsp"></jsp:forward>
         <% } %>
         

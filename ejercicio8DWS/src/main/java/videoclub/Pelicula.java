@@ -9,7 +9,7 @@ package videoclub;
 public class Pelicula {
     
     private String nombre;
-    private int diasAlguiler;
+    private String diasDeAlquiler;
     private String edadMaxCliente;
     private String formaPago;
     private String especificaciones;
@@ -28,19 +28,7 @@ public class Pelicula {
         this.nombre = nombre;
     }
 
-    /**
-     * @return the diasAlguiler
-     */
-    public int getDiasAlguiler() {
-        return diasAlguiler;
-    }
-
-    /**
-     * @param diasAlguiler the diasAlguiler to set
-     */
-    public void setDiasAlguiler(int diasAlguiler) {
-        this.diasAlguiler = diasAlguiler;
-    }
+   
 
     /**
      * @return the edadMaxCliente
@@ -78,10 +66,24 @@ public class Pelicula {
     }
 
     /**
-     * @param Especificaciones the Especificaciones to set
+     * @param especificaciones the Especificaciones to set
      */
     public void setEspecificaciones(String especificaciones) {
         this.especificaciones = especificaciones;
+    }
+
+    /**
+     * @return the diasDeAlquiler
+     */
+    public String getDiasDeAlquiler() {
+        return diasDeAlquiler;
+    }
+
+    /**
+     * @param diasDeAlquiler the diasDeAlquiler to set
+     */
+    public void setDiasDeAlquiler(String diasDeAlquiler) {
+        this.diasDeAlquiler = diasDeAlquiler;
     }
     
 }
