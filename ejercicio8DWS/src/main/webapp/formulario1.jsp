@@ -13,7 +13,8 @@
         <title>VideoClub Online</title>
     </head>
     <body>
-        <% if(request.getParameter("Nom_Pelicula")==null){ %>
+        <% if((request.getParameter("Nom_Pelicula")==null)||(request.getParameter("Num_Dias_Alquiler")==null)
+            ||(request.getParameter("Edad_Cliente")==null) ){ %>
         Complete este formulario:<br>
         <form name="videoclub" action="formulario1.jsp" method="POST">
             <table  border="0" width="50%" cellspacing="2" bgcolor="#F5F6CE">
@@ -50,16 +51,16 @@
                     <tr>
                         <td></td>
                         <td></td>
-                        <td><input type="radio" name="Edad_Cliente" value="<7" />Menor de 7 años<br>
-                            <input type="radio" name="Edad_Cliente" value="<14" />Menor de 14 años<br>
-                            <input type="radio" name="Edad_Cliente" value="<18" />Menor de 18 años<br>
-                            <input type="radio" name="Edad_Cliente" value=">18" />Mayor de 18 años<br>
+                        <td><input type="radio" name="Edad_Cliente" value="-7" />Menor de 7 años<br>
+                            <input type="radio" name="Edad_Cliente" value="-14" />Menor de 14 años<br>
+                            <input type="radio" name="Edad_Cliente" value="-18" />Menor de 18 años<br>
+                            <input type="radio" name="Edad_Cliente" value="+18" />Mayor de 18 años<br>
                         </td>
                         <td><select name="Forma_Pago">
-                                <option value="vi" SELECTED>VISA</option>
-                                <option value="ch">Cheque</option>
-                                <option value="co">Contado</option>
-                                <option value="me">Metálico</option>
+                                <option value="visa" SELECTED>VISA</option>
+                                <option value="cheque">Cheque</option>
+                                <option value="contado">Contado</option>
+                                <option value="metalico">Metálico</option>
                             </select>
                             
                         </td>
