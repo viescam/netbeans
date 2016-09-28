@@ -33,7 +33,7 @@ public class SolicitudOperacion {
         return numeroAleatorio;
     }
 
-    public void setNumAleatorio(double numeroAleatorio) {
+    public void setNumeroAleatorio(double numeroAleatorio) {
         this.numeroAleatorio = numeroAleatorio;
         calcularEstado();
     }
@@ -41,10 +41,11 @@ public class SolicitudOperacion {
     private void calcularEstado(){
        if(this.numeroAleatorio < 0.5) {
                 this.estadoAutorizacion="Autorizada";
+                 this.motivoRechazo="";
             }
             else{
                 this.estadoAutorizacion="Rechazada";
-                this.asignarMotivoRechazo();
+                asignarMotivoRechazo();
             } 
     }
     
@@ -55,12 +56,9 @@ public class SolicitudOperacion {
     private void asignarMotivoRechazo() {
         String[] motivosRechazo={"La autorización se realizó fuera de plazo", "No quedan suficientes suministros para administrar esa cantidad",
             "No existe conexión con el servidor"};
-        if(this.estadoAutorizacion=="Autorizada"){
-            this.motivoRechazo="";
-        }else{
-            int aleatorio = (int) (this.numeroAleatorio * 3 + 0);
-            this.motivoRechazo=motivosRechazo[aleatorio];
-        } 
+        int aleatorio = (int) (this.numeroAleatorio * 3 + 0);
+        this.motivoRechazo=motivosRechazo[aleatorio];
+         
     }
     
     public String getMotivoRechazo(){

@@ -55,7 +55,7 @@
         %>
             <jsp:setProperty name="solicitud" property="practica" value="<%= practicaMedica %>" />
             <jsp:setProperty name="solicitud" property="cantidad" value="<%= cantidad %>" />
-            <jsp:setProperty name="solicitud" property="numeroAleatorio" value="<%= numeroAleatorio %>" />
+            <jsp:setProperty name="solicitud" property="numeroAleatorio" value="<%= numeroAleatorio%>" />
             <jsp:forward page="/respuestaSolicitud.jsp"></jsp:forward>
         <% } %>
     </body>
