@@ -13,6 +13,6 @@
         <title>Página de bienvenida</title>
     </head>
     <body>
-        <b>Hola <jsp:getProperty name="login" property="nombreUsuario" /></b>
+        <b>Hola <jsp:getProperty name="login" property="nombreUsuario" />, el proceso de logueo de ha ocurrido sin problemas</b>
     </body>
 </html>

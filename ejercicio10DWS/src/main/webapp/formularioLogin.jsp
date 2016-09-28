@@ -7,13 +7,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <jsp:useBean id="login" scope="request" class="usuario.Datos" />
+
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
     </head>
+    
     <body>
-        <% while((request.getParameter("usuario")==null || request.getParameter("pswd")==null) || 
+        <% if((request.getParameter("usuario")==null || request.getParameter("pswd")==null) || 
                (request.getParameter("usuario")=="" || request.getParameter("pswd")==""))  { %>
             <form name="login" action="formularioLogin.jsp" method="POST">
                 <h1>Formulario de login de usuarios</h1>
@@ -23,15 +25,15 @@
                 Los campos marcados con asterisco deben rellenarse de forma obligatoria<br>
                 <input type="submit" value="Enviar Consulta" />&nbsp<input type="reset" value="Restablecer" />
             </form>
-        <% } %>
-        <% String nombreUsuario, claveAcceso;
-            nombreUsuario=request.getParameter("usuario");
-            claveAcceso=request.getParameter("pswd");
-        %>
-        <jsp:setProperty name="login" property="nombreUsuario" value="<%= nombreUsuario%>"/>
-        <jsp:setProperty name="login" property="nombreUsuario" value="<%= nombreUsuario%>"/>
-        <jsp:forward page="/bienvenida.jsp"></jsp:forward>
-        
-        
+        <% }else{ %>
+            <% String nombreUsuario, claveAcceso;
+                nombreUsuario=request.getParameter("usuario");
+                claveAcceso=request.getParameter("pswd");
+            %>
+                <jsp:setProperty name="login" property="nombreUsuario" value="<%= nombreUsuario%>"/>
+                <jsp:setProperty name="login" property="claveAcceso" value="<%= claveAcceso%>"/>
+                <jsp:forward page="/bienvenida.jsp"></jsp:forward>
+       <% } %>
     </body>
+    
 </html>
