@@ -13,6 +13,7 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <%! double numeroAleatorio = Math.random(); %>
         <% if((request.getParameter("practica")==null)||(request.getParameter("cantidad")==null)){ %>
             Complete este formulario:<br>
             <form name="autorizacion" action="formularioSolicitud.jsp" method="POST">
@@ -43,14 +44,19 @@
         <% } else { %>
         <% String practicaMedica;
            int cantidad;
+           double numAleat1, numAleat2;
         %>
         <% 
             practicaMedica= request.getParameter("practica");
-            cantidad= Integer.parseInt(request.getParameter("cantidad"));            
+            cantidad= Integer.parseInt(request.getParameter("cantidad"));
+            numeroAleatorio= Math.random();
+
+            
         %>
             <jsp:setProperty name="solicitud" property="practica" value="<%= practicaMedica %>" />
             <jsp:setProperty name="solicitud" property="cantidad" value="<%= cantidad %>" />
-            <jsp:forward page="/formulario2.jsp"></jsp:forward>
+            <jsp:setProperty name="solicitud" property="numeroAleatorio" value="<%= numeroAleatorio %>" />
+            <jsp:forward page="/respuestaSolicitud.jsp"></jsp:forward>
         <% } %>
     </body>
 </html>

@@ -11,56 +11,63 @@ public class SolicitudOperacion {
     private int cantidad;
     private String estadoAutorizacion;
     private String motivoRechazo;
-
-    /**
-     * @return the practica
-     */
+    private double numeroAleatorio;
+ 
     public String getPractica() {
         return practica;
     }
 
-    /**
-     * @param practica the practica to set
-     */
     public void setPractica(String practica) {
         this.practica = practica;
     }
 
-    /**
-     * @return the cantidad
-     */
     public int getCantidad() {
         return cantidad;
     }
 
-    /**
-     * @param cantidad the cantidad to set
-     */
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
     
-    public String getSetEstadoAutorizacion(){
-        if(Math.random() < 0.5) {
-            estadoAutorizacion="Autorizada";
-        }
-        else{
-            estadoAutorizacion="Rechazada";
-        }
+    public double getNumeroAleatorio() {
+        return numeroAleatorio;
+    }
+
+    public void setNumAleatorio(double numeroAleatorio) {
+        this.numeroAleatorio = numeroAleatorio;
+        calcularEstado();
+    }
+    
+    private void calcularEstado(){
+       if(this.numeroAleatorio < 0.5) {
+                this.estadoAutorizacion="Autorizada";
+            }
+            else{
+                this.estadoAutorizacion="Rechazada";
+                this.asignarMotivoRechazo();
+            } 
+    }
+    
+    public String getEstadoAutorizacion() {
         return estadoAutorizacion;
     }
     
-    public String getSetMotivoRechazo(){
+    private void asignarMotivoRechazo() {
         String[] motivosRechazo={"La autorización se realizó fuera de plazo", "No quedan suficientes suministros para administrar esa cantidad",
             "No existe conexión con el servidor"};
-        if(estadoAutorizacion=="Autorizada"){
-            motivoRechazo="";
+        if(this.estadoAutorizacion=="Autorizada"){
+            this.motivoRechazo="";
         }else{
-            int aleatorio = (int) (Math.random() * 3 + 0);
-             motivoRechazo=motivosRechazo[aleatorio];
-        }
-        return motivoRechazo;
-        
+            int aleatorio = (int) (this.numeroAleatorio * 3 + 0);
+            this.motivoRechazo=motivosRechazo[aleatorio];
+        } 
     }
+    
+    public String getMotivoRechazo(){
+        return motivoRechazo;
+    }
+    
+    
 }
+
 
