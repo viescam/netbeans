@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejercicio DOM</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function crearParrafo() {
+                var texto = prompt();
+                var parrafo = document.createElement("p");
+                var contenido = document.createTextNode(texto);
+                parrafo.appendChild(contenido);
+                document.body.appendChild(parrafo);
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick=crearParrafo()>Parrafos</button>
+    </body>
+</html>
