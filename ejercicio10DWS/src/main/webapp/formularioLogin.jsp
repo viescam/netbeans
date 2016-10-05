@@ -16,14 +16,15 @@
     
     <body>
         <% if((request.getParameter("usuario")==null || request.getParameter("pswd")==null) || 
-               (request.getParameter("usuario")=="" || request.getParameter("pswd")==""))  { %>
-            <form name="login" action="formularioLogin.jsp" method="POST">
+               (request.getParameter("usuario").equals("") || request.getParameter("pswd").equals("")))  { %>
+               
+            <form method="POST" action="formularioLogin.jsp">
                 <h1>Formulario de login de usuarios</h1>
-                Nombre de usuario*:<input type="text" name="usuario" value="" size="20" /><br>
-                Clave de acceso*:<input type="password" name="pswd" value="" size="20" /><br>
+                Nombre de usuario*:<input type="text" name="usuario" value="" size="20" ><br>
+                Clave de acceso*:<input type="password" name="pswd" value="" size="20" ><br>
                 Recordar datos de acceso:<input type="checkbox" name="recordarDatos" value="si"><br>
                 Los campos marcados con asterisco deben rellenarse de forma obligatoria<br>
-                <input type="submit" value="Enviar Consulta" />&nbsp<input type="reset" value="Restablecer" />
+                <input type="submit" value="Enviar Consulta" >&nbsp<input type="reset" value="Restablecer" >
             </form>
         <% }else{ %>
             <% String nombreUsuario, claveAcceso;
