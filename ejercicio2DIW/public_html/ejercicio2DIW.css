@@ -189,65 +189,99 @@
     border:none;
     box-shadow: inset -5px -5px 20px red;
 }
-.toolbar-list{
+.toolbar__list{
     padding:0;
     margin:0;
+    display:block;
 }
-.toolbar{
+.toolbar__item{
     float:left;
     list-style-type: none;
     background-color: #ffffff;
-    color:#000000;
     border-width: 1px 0px 1px 1px;
     border-style: solid;
     border-color: #cccccc;
-    padding: 10px 10px;
+    display:block;
 }
-.toolbar:first-child{
-    border-radius: 5px 0 0 5px;
+.toolbar__item:first-child{
+    border-radius: 3px 0 0 3px;
 }
-.toolbar:last-child{
+.toolbar__item:last-child{
     border:1px solid #cccccc;
-    border-radius: 0 5px 5px 0;
+    border-radius: 0 3px 3px 0;
 }
-.toolbar-element{
+.toolbar__link{
     text-decoration: none;
+    color:#000000;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 10px;    
 }
-.toolbar:hover{
-    background-color: #e6e6e6;
+.toolbar__item:hover{
     border-color:#adadad;    
 }
-.toolbar:hover+li{
+.toolbar__item:hover+li{
     border-color:#cccccc #cccccc #cccccc #adadad;    
 }
-.number-list{
+/*.toolbar__link:hover{
+    color:red;
+}*/
+
+
+.number__list{
     padding:0;
-    margin:0;   
+    margin:50px 0;
+    display:block;
+    clear:both;
 }
-.number{
+.number__item{
     float:left;
     list-style-type: none;
     background-color: #ffffff;
-    color:#337AB7;
-    border-width: 1px 1px 1px 0px;
+    border-width: 1px 0px 1px 1px;
     border-style: solid;
-    border-color: #cccccc;
+    border-color: #e6e6e6;
 }
-.boton--numeros{
-    background-color: #ffffff;
+.number__item:first-child{
+    border-radius: 5px 0 0 5px;
+}
+.number__item:last-child{
+    /*border:1px solid #e6e6e6;*/
+    border-width: 1px;
+    border-radius: 0 5px 5px 0;
+}
+.number__link{
+    text-decoration: none;
     color:#337AB7;
-    border:1px solid #cccccc;
-    margin:0;
-    float:left;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding:10px 10px;
 }
-.boton--numeros:hover{
-    background-color: #EEEEEE;
-    color:#23527c;
-    border:1px solid #cccccc;
-    border-radius: 0;
-    margin:0;
-    float:left;
+.number__item:hover{
+    background-color: #eeeeee;
+    border-color: #e1e1e1;     
 }
+.number__item:hover+li{
+    border-color:#e6e6e6 #e6e6e6 #e6e6e6 #e1e1e1;    
+}
+.number__link:hover{
+    color:#385785;   
+}
+.number__item--disabled{
+     background-color: red;
+}
+.number__link--disabled{
+    color:#ffffff;
+}
+.number__item--disabled:hover{
+     background-color: red;
+}
+.number__link--disabled:hover{
+    color:#ffffff;
+}
+
 
 
 
