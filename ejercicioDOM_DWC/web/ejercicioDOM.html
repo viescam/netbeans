@@ -3,28 +3,29 @@
     <head>
         <title>Ejercicio DOM</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script>
-            function crearParrafo() {
-                var texto = prompt();
-                var parrafo = document.createElement("p");
-                var contenido = document.createTextNode(texto);
-                parrafo.appendChild(contenido);
-                document.body.appendChild(parrafo);
-            }
-            function insertarParrafoEnDiv() {
-                var texto = prompt();
-                var parrafo = document.createElement("p");
-                var contenido = document.createTextNode(texto);
-                parrafo.appendChild(contenido);
-                nodo = document.getElementById("capa1");
-                nodo.appendChild(parrafo);//no se debe poner el document. antes de nodo; porque este ya es una variable, no forma parte del documento
-            }
-            function eliminarNodo(){
-                nodo = document.getElementById("p3");
-                nodo.parentNode.removeChild(nodo);
-            }
-        </script>
     </head>
+    <script>
+        function crearParrafo() {
+            var texto = prompt();
+            var parrafo = document.createElement("p");
+            //en ocasiones es importante, o incluso necesario acceder a los atributos
+            var contenido = document.createTextNode(texto);
+            parrafo.appendChild(contenido);
+            document.body.appendChild(parrafo);
+        }
+        function insertarParrafoEnDiv() {
+            var texto = prompt();
+            var parrafo = document.createElement("p");
+            var contenido = document.createTextNode(texto);
+            parrafo.appendChild(contenido);
+            nodo = document.getElementById("capa1");
+            nodo.appendChild(parrafo);//no se debe poner el document. antes de nodo; porque este ya es una variable, no forma parte del documento
+        }
+        function eliminarNodo() {
+            nodo = document.getElementById("p3");
+            nodo.parentNode.removeChild(nodo);
+        }
+    </script>
     <!--Para clonar un nodo:
         nuevo_nodo=nodo_a_clonar.nodeClone(True o False); con True se clonan todos los hijos, y con False solo ese nodo-->
     <body>
