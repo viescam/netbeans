@@ -20,6 +20,7 @@
  }
  .hoy{
     background-color: blue;
+    color:white;
  }
  .enlace{
      text-decoration: none;
@@ -27,6 +28,9 @@
      color:gray;
      display:inline-block;
      width: 75px;
+ }
+ .enlace:hover{
+     color:lightsalmon;
  }
  .enlace--mes--anterior{
      float:left;
@@ -54,5 +58,8 @@
      clear:both;
      margin: 0 100px;
      display:inline-block;
+ }
+ #mesCalendario{
+     font-size:20px;
  }
 
