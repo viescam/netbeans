@@ -38,10 +38,12 @@
  #mes{
      width: 80px;
      float:left;
+     height:21px;
  }
  #anyo{
      width: 80px;
      float:right;
+     
  }
  .enlace--mes--posterior{
      float:right;
