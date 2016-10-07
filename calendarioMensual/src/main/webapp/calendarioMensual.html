@@ -88,9 +88,8 @@ and open the template in the editor.
 	}
     </script>
     <body>
-        <div id="formulario" align="center">
-                <a href="javascript:mesAnterior()"> << </a>
-                <a href="javascript:mesPosterior()"> >> </a>
+        <div id="formulario" class="indice">
+                <a href="javascript:mesAnterior()" class="enlace enlace--mes--anterior"> << </a>
                 <form id="form1">
                         <select name="mes" id="mes" class="formulario_select">
                                 <option value="0">Enero</option>
@@ -102,14 +101,16 @@ and open the template in the editor.
                                 <option value="6">Julio</option>
                                 <option value="7">Agosto</option>
                                 <option value="8">Septiembre</option>
-                                <option value="9">Octubre</option>
+                                <option value="9" selected="selected">Octubre</option>
                                 <option value="10">Noviembre</option>
                                 <option value="11">Diciembre</option>
                         </select>
+                    <a href="javascript:mesPosterior()" class="enlace enlace--mes--posterior"> >> </a>
                         <input type="text" id="anyo" value="2016" size="4">
 
                 </form>
-                <input type="button" value="Mostrar" onclick="sacarFecha()" align="center">
+                
+                <input type="button" class="mostrar" value="Mostrar" onclick="sacarFecha()" align="center">
 
         </div>
         <br/> 

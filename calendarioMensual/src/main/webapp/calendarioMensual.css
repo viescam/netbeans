@@ -21,4 +21,36 @@
  .hoy{
     background-color: blue;
  }
+ .enlace{
+     text-decoration: none;
+     font-size:25px;
+     color:gray;
+     display:inline-block;
+     width: 75px;
+ }
+ .enlace--mes--anterior{
+     float:left;
+ }
+  .indice{
+     width: 350px;
+     margin: 0 auto;
+ }
+ #mes{
+     width: 80px;
+     float:left;
+ }
+ #anyo{
+     width: 80px;
+     float:right;
+ }
+ .enlace--mes--posterior{
+     float:right;
+     text-align: right;
+ }
+ .mostrar{
+     width: 150px;
+     clear:both;
+     margin: 0 100px;
+     display:inline-block;
+ }
 
